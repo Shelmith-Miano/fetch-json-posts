@@ -1,0 +1,156 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+.head {
+    background-color: rgb(92, 12, 25);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.nav-bar {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-bar a:hover {
+    color: #f4a261;
+}
+
+
+.hero {
+   
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+   
+   
+}
+
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 32px;
+    color: rgb(92, 12, 25);
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 16px;
+   
+    
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    margin
+}
+.contact{
+    align-items: center;
+}
+
+
+aside.left .links {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+@media (max-width: 768px) {
+    aside.left {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        /* width: 320px; */
+        z-index: 999;
+        background-color: rgba(0, 0, 0, .6) !important;
+    }
+    aside.left button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 40px;
+        width: 40px;
+        height: 40px;
+        color: white;
+        border: none;
+        background: none;
+    }
+    aside.left button svg {
+        width: 40px;
+        height: 40px;
+    }
+    aside.left .links {
+        width: 320px;
+        background-color: brown !important;
+        height: 100%;
+    }
+
+}
+aside.left a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, .05);
+    border-radius: 6px;
+    font-weight: 600;
+}
+aside.left a:hover {
+    background-color: rgba(255, 165, 0, 0.75);
+}
+
+/* From screen size 769px (min) upwards */
+@media (min-width: 769px) {
+    .landing-page {
+        grid-template-areas:
+            "top  top     top     top"
+            "left content content content"
+            "left content content content"
+            "footer footer footer footer";
+        grid-template-rows: 64px auto auto 40px;
+        grid-template-columns: 360px auto;
+    }
+    .child.left.hidden {
+        display: flex;
+    }
+
+    nav.top #toggle-menu {
+        display: none;
+    }
+
+    aside.left .overlay {
+        display: none;
+    }
+}
+
